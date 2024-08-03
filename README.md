@@ -14,8 +14,8 @@ Here is a prototype of how the game should look like, when it's done:
 
 And here is how far I have gotten so far:
 
-
 [![youtube_link](https://img.youtube.com/vi/F5fe8uTFr4M/0.jpg)](https://youtu.be/F5fe8uTFr4M?si=KiheSRbV42N51B9u)
+
 https://youtu.be/F5fe8uTFr4M?si=KiheSRbV42N51B9u
 
 As soon as I am finished coding, I will soldier all the components to a circuit board and make it as children-safe as possible (she is 4). But there are still some ideas I want to implement.
