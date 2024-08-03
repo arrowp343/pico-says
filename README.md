@@ -1,6 +1,6 @@
 # <s>Simon</s> Pico Says
 
-![testenv]()
+![testenv](https://raw.githubusercontent.com/arrowp343/pico-says/main/pictures/testenv.jpeg)
 
 ## What is this?
 
@@ -10,7 +10,7 @@ Most people will remember this game, maybe as toy from the childhood or some sor
 
 Here is a prototype of how the game should look like, when it's done:
 
-![prototype]()
+![prototype](https://raw.githubusercontent.com/arrowp343/pico-says/main/pictures/prototype.JPEG)
 
 And here is how far I have gotten so far:
 
@@ -50,7 +50,7 @@ First, if you want to reproduce it exactly how I made it (of course you can leav
 - 1x switch
 - some resistors (I made it without resistors so far)
 
-![early_testenv]()
+![early_testenv](https://raw.githubusercontent.com/arrowp343/pico-says/main/pictures/early_testenv.jpeg)
 
 A detailed circuit plan is in schedule. But until then, maybe these instructions could be helpful:
 Basically you need to connect all negative sides of the LEDs, the ground pin of the 7segment-display and one side of the button to the ground pin of the Raspberry Pi Pico. Each other pins are connected to a seperate gpio pin of the Pico.
