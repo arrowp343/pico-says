@@ -1,14 +1,18 @@
 from time import sleep_ms
 from machine import Pin, PWM
 
-buzzer = PWM(Pin(15)) 
+right_buzzer = PWM(Pin(0)) 
+left_buzzer = PWM(Pin(1))
 
 def buzz(frequency: int, volume: int = 1000):
-    buzzer.duty_u16(volume)
-    buzzer.freq(frequency)
+    left_buzzer.duty_u16(volume)
+    left_buzzer.freq(frequency)
+    right_buzzer.duty_u16(volume)
+    right_buzzer.freq(frequency)
 
 def quiet():
-    buzzer.duty_u16(0)
+    left_buzzer.duty_u16(0)
+    right_buzzer.duty_u16(0)
 
 def test():
     tones = [800, 1200, 1600, 2000]
@@ -22,4 +26,4 @@ def test():
         quiet()    
     quiet()
 
-#test()
+test()

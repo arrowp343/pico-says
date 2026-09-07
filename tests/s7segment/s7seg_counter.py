@@ -10,5 +10,5 @@ def s7seg_counter(speed: int = 1):
         s7seg.number_to_s7seg(str(counter))
         sleep_ms(500 // speed)
 
-while True:
+while False:
     s7seg_counter(4)
