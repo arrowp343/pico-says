@@ -4,17 +4,18 @@ from hardware.gpio_config import yellow, green, red, blue, init
 from time import sleep_ms
 import random
 from color import Color
-from hardware.buzzer import buzz, quiet
+from hardware.buzzer.buzzer import buzz, quiet
 
 def display(round: int):
-    gpio.PARTY_LED_0.value(1)
-    gpio.PARTY_LED_1.value(1)
     print_7seg(str(round))
-    for color in sequence[:round]:
+    for idx, color in enumerate(sequence[:round]):
+        gpio.rotate_party_led(idx % 2 == 0)
         color.on(500)
         sleep_ms(500)
     gpio.PARTY_LED_0.value(0)
     gpio.PARTY_LED_1.value(0)
+    gpio.PARTY_LED_2.value(0)
+    gpio.PARTY_LED_3.value(0)
 
 def expect_color(expected_color: Color):
     print("expect color: " + str(expected_color))

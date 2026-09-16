@@ -45,6 +45,8 @@ blue = Color(BLUE_LED, BLUE_BUTTON, BLUE_TONE, global_brightness, "blue")
 def all_off():
     PARTY_LED_0.value(0)
     PARTY_LED_1.value(0)
+    PARTY_LED_2.value(0)
+    PARTY_LED_3.value(0)
     yellow.off()
     green.off()
     red.off()
@@ -57,6 +59,33 @@ def all_off():
     s7seg_f.value(0)
     s7seg_g.value(0)
     s7seg_dot.value(0)
+    
+def party_led_off():
+    PARTY_LED_0.value(0)
+    PARTY_LED_1.value(0)
+    PARTY_LED_2.value(0)
+    PARTY_LED_3.value(0)
+
+def switch_party_led(n: int):
+    party_led_off()
+    if n % 4 == 0:
+        PARTY_LED_0.value(1)
+    elif n % 4 == 1:
+        PARTY_LED_1.value(1)
+    elif n % 4 == 2:
+        PARTY_LED_2.value(1)
+    elif n % 4 == 3:
+        PARTY_LED_3.value(1)
+
+def rotate_party_led(diagonal: bool):
+    party_led_off()
+    if diagonal:
+        PARTY_LED_0.value(1)
+        PARTY_LED_2.value(1)
+    else:
+        PARTY_LED_1.value(1)
+        PARTY_LED_3.value(1)
+
 all_off()
 yellow.on()
 green.on()

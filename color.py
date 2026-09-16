@@ -1,6 +1,6 @@
 from machine import Pin, PWM
 from time import sleep_ms
-from hardware.buzzer import buzz, quiet
+from hardware.buzzer.buzzer import buzz, quiet
 
 class Color:
     def __init__(self, led_pin: Pin, button: Pin, tone: int, brightness: float, name: str = "unnamed color",):
